@@ -1,0 +1,37 @@
+.section-title-div {
+    height: 300px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+    border-bottom-width: 1px;
+}
+
+.section-title-title {
+    --tw-text-opacity: 1;
+    color: hsl(var(--ac) / var(--tw-text-opacity));
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    @media not all and (min-width: 640px) {
+        .max-sm\:text-6xl {
+            font-size: 3.75rem;
+            line-height: 1;
+        }
+    }
+
+    @media not all and (min-width: 768px) {
+        .max-md\:text-7xl {
+            font-size: 4.5rem;
+            line-height: 1;
+        }
+    }
+}
+
+.section-title-path {
+    --tw-text-opacity: 1;
+    color: hsl(var(--ac) / var(--tw-text-opacity));
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+}

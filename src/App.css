@@ -1,0 +1,388 @@
+:root {
+  --primary-color: #4f4aa6;
+  --secondary-color: #48ca95;
+  --bg-color: #f7f7f7;
+  --light-color: #fff;
+  --dark-color: #000;
+
+  --header-title-font: poppins-bold;
+  --section-title-font: poppins-semiBold;
+  --text-font: poppins; /*Esta es una variable para la fuente*/
+  --menu-font: poppins-bold; /*Esta es una variable para el menu*/
+  --banner-subtitle-font: Poppins-light;
+  --banner-title-font: poppins;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--text-font);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url("../public/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: poppins-bold;
+  src: url("../public/fonts/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: poppins-extrabold;
+  src: url("../public/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: poppins-semibold;
+  src: url("../public/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: Poppins-light;
+  src: url("../public/fonts/Poppins-Light.ttf");
+}
+
+
+
+
+/*Header*/
+
+header {
+  background-image: url("../public/images/banner.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+nav ul li {
+  padding: 10px;
+}
+
+nav ul li a {
+  /*menu completo*/
+  color: var(--light-color);
+  text-decoration: none;
+  font-family: var(--menu-font);
+}
+
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+
+.selecte {
+  color: var(--secondary-color);
+}
+
+.header-img {
+  margin: 5px 25px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  margin-bottom: 50px;
+  background-image: url("../public/images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-content-text {
+  max-width: 500px;
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-content-btns {
+  margin-top: 50px;
+}
+
+.header-title {
+  font-size: 80px;
+  font-family: var(--header-title-font);
+}
+
+.header-subtitle {
+  font-size: 40px;
+}
+
+.btn {
+  color: var(--light-color);
+  padding: 15px 60px;
+  border: 2px solid var(--light-color);
+  text-decoration: none;
+  margin: 0px 5px;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+/*Inicio de diseño responsive mobil*/
+
+.menu-mobile {
+  /*Ocultamos medidas de barra de navegación*/
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menu-mobile {
+    display: flex;
+  }
+  .menu-screen {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header-content {
+    flex-direction: column;
+  }
+  .header-content-text {
+    margin-left: 20px;
+  }
+  .header-title {
+    font-size: 40px;
+  }
+
+  .header-subtitle {
+    font-size: 20px;
+  }
+  .header-content-text p {
+    font-size: 14px;
+  }
+  .btn {
+    padding: 10px 30px;
+  }
+  .header-img {
+    margin: 50px 10px;
+    width: 95%;
+    height: 100%;
+    max-width: 500px;
+  }
+}
+/* End Header */
+
+/* Cards section */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  padding: 60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 5px;
+  padding: 25px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 15px;
+  margin: 0px 10px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card h5 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  text-align: center;
+}
+
+/*End Cards section*/
+
+/* Products section */
+.products {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.products h3{
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: var(--section-title-font);
+  border-bottom: 1px solid var(--secondary-color);
+  margin-bottom: 25px;
+
+}
+
+.products-container {  
+  background-color: var(--light-color);
+  width: 1100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 25px;
+  margin-bottom: 100px;
+
+}
+
+.product-card {
+  width: 203px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+}
+
+.product-card a {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-secondary {
+    color: var(--secondary-color);
+    padding: 15px 60px;
+    border: 2px solid var(--secondary-color);
+    text-decoration: none;
+    margin: 0px 5px;
+}
+
+/* End products section */
+
+/*menu-mobil-cars*/
+
+@media (max-width: 1100px) {
+  .products-container {
+    width: 96%;
+  }
+}
+
+/* End products section */
+
+/*Banner section*/
+
+.banner {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 70px
+}
+
+.banner-content {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.banner-content-text {
+  max-width: 500px;
+  color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-title {
+  font-size: 48px;
+  font-family: var(--banner-title-font);
+}
+
+.banner-subtitle {
+  font-size: 20px;
+  font-family: var(--banner-subtitle-font);
+}
+
+.btn-primary-full {
+  color: var(--light-color);
+  padding: 15px 60px;
+  border: 2px solid var(--secondary-color);
+  text-decoration: none;
+  margin: 0px 5px;
+  background-color: var(--secondary-color);
+}
+
+.btn-primary-full:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+@media(max-width:800px) {
+  .banner-content {
+    flex-direction: column;
+    
+  }
+  
+}
+
+/* End Banner section*/
+
+/*Footer section*/
+footer {
+  background-image: url("../public/images/footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.copryright{
+  width: 1200px;
+  color: var(--light-color);
+  border-top: 1px solid var(--light-color);
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.footer-conten{
+  width: 1200px;
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 25px;
+}
+
+.footer-card {
+  width: 400px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: grid;
+  grid-gap: 10px;
+}
+
+.footer-logo {
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+}
